@@ -20,4 +20,3 @@ node ("windows"){
     } // withMaven will discover the generated Maven artifacts, JUnit Surefire & FailSafe & FindBugs reports...
   }
 }
-}
