@@ -5,7 +5,7 @@ node (){
  
     git url: 'https://github.com/Sourcebits-Srilalitha/JTV-jenkins-project'
  
-   {
+   
       echo 'Before build'
       // Run the maven build
       //   sh "mvn clean install" //unix
@@ -13,6 +13,6 @@ node (){
       
         echo 'After build'
  
-    } // withMaven will discover the generated Maven artifacts, JUnit Surefire & FailSafe & FindBugs reports...
+    
   }
 }
