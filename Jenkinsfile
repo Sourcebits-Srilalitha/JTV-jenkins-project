@@ -1,7 +1,7 @@
 
-node ("windows"){
+node (){
    echo 'I am in jenkins file'
-  stage ('Build') {
+   stage ('Build') {
  
     git url: 'https://github.com/Sourcebits-Srilalitha/JTV-jenkins-project'
  
