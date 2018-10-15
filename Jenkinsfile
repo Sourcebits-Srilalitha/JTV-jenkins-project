@@ -1,9 +1,9 @@
 
 node {
- echo I am in jenkins file
+   echo 'I am in jenkins file'
  
    stage('SCM Checkout') {
-    echo maven Package
+      echo 'maven Package'
       git 'https://github.com/Sourcebits-Srilalitha/JTV-jenkins-project.git'
      
    }
@@ -12,9 +12,9 @@ node {
          sh 'mvn package'
      } else {
         call mvn clean
-      echo mvnClean
-         bat (call mvn package)
-       echo mavenPackage
+        echo 'mvnClean'
+        bat (call mvn package)
+        echo 'mavenPackage'
      }
    }
    
