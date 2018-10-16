@@ -38,7 +38,7 @@
       steps {
           script {
           print 'Before Copy'    
-          xcopy 'C:\\Users\\Srilalitha Jana\\.m2\\repository\\JTV\\JTV-Backend\\1.6.8-SNAPSHOT\\JTV-Backend-1.6.8-SNAPSHOT-collection.war' 'C:\\JTV-jenkins\\' /K /D /H /Y
+          xcopy "C:\\Users\\Srilalitha Jana\\.m2\\repository\\JTV\\JTV-Backend\\1.6.8-SNAPSHOT\\JTV-Backend-1.6.8-SNAPSHOT-collection.war" "C:\\JTV-jenkins\\" /K /D /H /Y
          print 'After Copy...'
           }
       }     
