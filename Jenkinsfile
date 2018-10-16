@@ -39,7 +39,7 @@
       
           print 'Before Copy'    
           // xcopy 'C:\\Users\\Srilalitha Jana\\.m2\\repository\\JTV\\JTV-Backend\\1.6.8-SNAPSHOT\\*.war'  'C:\\JTV-jenkins\\'
-            sshagent(['tomcat-jenkins']) {
+            sshagent(credentials:['tomcat-jenkins']) {
                 sh 'scp -o StrictHostKeyChecking=no target/*.war ec2-user@34.227.59.124:/var/lib/tomcat8/webapps'
             }
           print 'After Copy...'
