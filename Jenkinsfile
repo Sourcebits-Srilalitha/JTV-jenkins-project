@@ -21,7 +21,8 @@
                             //input message:'Approve deployment?', submitter: 'it-ops'
                             input message: 'Approve deployment?'
                         }
-                        timeout(time: 2, unit: 'MINUTES') {                               
+                        timeout(time: 2, unit: 'MINUTES') {   
+                            if (currentBuild.result == null || currentBuild.result == 'SUCCESS') {
                                 echo 'the application is deployed !'
                             } else {
                                 error 'the application is not  deployed as development version is null!'
