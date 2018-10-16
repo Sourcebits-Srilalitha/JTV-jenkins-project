@@ -1,4 +1,5 @@
   pipeline {
+    agent any
     echo 'First Line'
     stages {
        echo 'Stages'
