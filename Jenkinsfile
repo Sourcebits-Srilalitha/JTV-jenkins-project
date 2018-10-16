@@ -1,12 +1,15 @@
   pipeline {
     agent any
-    echo 'First Line'
+    print 'First Line'
     stages {
-       echo 'Stages'
+       print 'Stages'
     stage('Build') {
-     echo 'Build...' + env.BRANCH_NAME     
-     bat 'mvn clean install'
-     echo 'After Build...'
+     print 'Build...' + env.BRANCH_NAME     
+      steps {
+        bat 'mvn clean install'
+        print 'After Build...'
+      }
+     
      }
     }  
   }
