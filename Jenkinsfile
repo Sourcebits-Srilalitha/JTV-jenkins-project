@@ -4,7 +4,7 @@
     stages {    
     stage('Build') {      
       steps {
-        print 'Build...' + env.BRANCH_NAME    
+        print 'Before Build...'  
         bat 'mvn clean install'
         print 'After Build...'
       }     
@@ -33,6 +33,14 @@
                 }
             }
         }
+      
+      stage('Deploy') {      
+      steps {
+        print 'Before Copy'    
+        xcopy "C:\Users\Srilalitha Jana\.m2\repository\JTV\JTV-Backend\1.6.8-SNAPSHOT\JTV-Backend-1.6.8-SNAPSHOT-collection.war" "C:\JTV-jenkins\" /K /D /H /Y
+        print 'After Copy...'
+      }     
+     }
       
       
     }  
