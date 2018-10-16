@@ -38,7 +38,7 @@
       steps {
           script {
           print 'Before Copy'    
-          		copy C:\Users\Srilalitha Jana\.m2\repository\JTV\JTV-Backend\1.6.8-SNAPSHOT\*.war  C:\JTV-jenkins\
+          copy C:\\Users\\Srilalitha Jana\\.m2\\repository\\JTV\\JTV-Backend\\1.6.8-SNAPSHOT\\*.war  C:\\JTV-jenkins\\
          print 'After Copy...'
           }
       }     
