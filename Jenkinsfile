@@ -13,13 +13,14 @@
                   //Works only with multi branch
                   echo 'Pulling...' + env.BRANCH_NAME
                   echo  'versionNumber ...' + env.BUILD_NUMBER;
-                   
-                }
+                  //check Unix env
+                  echo 'Unix env ... ' + isUnix()
+                       }
+                }       
          }
-       
-      }
       
-   stage('Build') {      
+ /*
+ stage('Build') {      
       steps {
         print 'Before Build...'  
         bat 'mvn clean install'
@@ -54,8 +55,8 @@
       stage('Deploy') {      
       steps {
        script {
-          print 'Before Copy'          
-         
+          print 'Before Copy'  
+       
           if (isUnix()) {
                                    sh "'pwd' "
                                } else {
@@ -72,7 +73,7 @@
           print 'After Copy...'       
        }         
       }     
-     }  
+     }  */
       
     } 
   }
