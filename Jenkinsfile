@@ -8,7 +8,7 @@
                   //Works only with multi branch
                    echo 'Pulling...' + env.BRANCH_NAME
 echo 'Getting mvnHome...'
-                    def mvnHome = tool 'Maven 3.5.4'
+                    def mvnHome = tool 'M3'
                   echo 'mvnHome...' + mvnHome
                    //bat(/"${mvnHome}\bin\mvn" -Dintegration-tests.skip=true clean package/)
                    bat(/"${mvnHome}\bin\mvn"/)
