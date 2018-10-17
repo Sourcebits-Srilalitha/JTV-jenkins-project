@@ -42,7 +42,7 @@
           if (isUnix()) {
                                    sh "'pwd' "
                                } else {
-              bat 'path'
+              bat 'xcopy "C:\\Users\\Srilalitha Jana\\.m2\\repository\\JTV\\JTV-Backend\\1.6.8-SNAPSHOT\\*.war"  "C:\\JTV-jenkins\\"'
                                   
                                }
 
