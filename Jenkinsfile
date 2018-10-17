@@ -7,7 +7,7 @@
                 script {
                    echo 'Pulling...' + env.BRANCH_NAME
                   
-                 echo 'Pulling complete env...' + env.getEnvironment() 
+                 //echo 'Pulling complete env...' + env.getEnvironment() 
                   echo 'Pulling... US Branch' + ${env.BRANCH}
                   
                   
