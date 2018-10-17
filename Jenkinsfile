@@ -37,9 +37,17 @@
       stage('Deploy') {      
       steps {
        script {
-          print 'Before Copy'           
+          print 'Before Copy'          
+         
+          if (isUnix()) {
+                                   sh "'pwd' "
+                               } else {
+                                   bat(/"path" /)
+                               }
+
+         
           //copy 'C:/Users/Srilalitha Jana\\.m2\\repository\\JTV\\JTV-Backend\\1.6.8-SNAPSHOT\\*.war C:\\JTV-jenkins\\'
-          xcopy 'C:\\Users\\Srilalitha Jana\\.m2\\repository\\JTV\\JTV-Backend\\1.6.8-SNAPSHOT\\*.war'  'C:\\JTV-jenkins\\'
+          //xcopy 'C:\\Users\\Srilalitha Jana\\.m2\\repository\\JTV\\JTV-Backend\\1.6.8-SNAPSHOT\\*.war'  'C:\\JTV-jenkins\\'
            // sshagent(['tomcat-jenkins']) {
          //       sh 'scp -o StrictHostKeyChecking=no target/*.war ec2-user@34.227.59.124:/var/lib/tomcat8/webapps'
         //    }
