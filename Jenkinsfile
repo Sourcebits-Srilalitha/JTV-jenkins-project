@@ -19,6 +19,9 @@
                         def pom = readMavenPom file: 'pom.xml'
                         print pom.version
                   
+                        //maven
+                        def mvn_version = 'M3'
+                        print 'maven version ...' + mvn_version
                        }
                 }       
          }   
