@@ -5,13 +5,11 @@
       stage('check'){
          steps {
                 script {
+                  //Works only with multi branch
                    echo 'Pulling...' + env.BRANCH_NAME
-                  
-                 //echo 'Pulling complete env...' + env.getEnvironment() 
-                  echo 'Pulling... US Branch' + ${env.BRANCH}
-                  
-                  
+echo 'Getting mvnHome...'
                     def mvnHome = tool 'Maven 3.5.4'
+                  echo 'mvnHome...' + mvnHome
                    //bat(/"${mvnHome}\bin\mvn" -Dintegration-tests.skip=true clean package/)
                    bat(/"${mvnHome}\bin\mvn"/)
                         def pom = readMavenPom file: 'pom.xml'
