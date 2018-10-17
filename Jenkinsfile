@@ -1,9 +1,9 @@
   pipeline {
     agent any  
     
-     environment {
+   /*  environment {
         MAVEN_HOME = tool('M3')
-    }
+    }*/
 
   
     stages {   
@@ -12,12 +12,13 @@
                 script {
                   //Works only with multi branch
                    echo 'Pulling...' + env.BRANCH_NAME
+                  echo  'versionNumber ...' + env.BUILD_NUMBER;
                    echo 'Getting mvnHome...'        
-                   echo 'mvnHome...' + MAVEN_HOME
+                 /*  echo 'mvnHome...' + MAVEN_HOME
                    //bat(/"${mvnHome}\bin\mvn" -Dintegration-tests.skip=true clean package/)
                    bat(/"${MAVEN_HOME}\bin\mvn"/)
                         def pom = readMavenPom file: 'pom.xml'
-                        print pom.version
+                        print pom.version*/
                 }
          }
        
