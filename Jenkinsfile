@@ -16,7 +16,7 @@
                        echo 'Unix env ... ' + isUnix()
                   
                         //read pom file
-                        def pom = readMavenPom file: 'pom.xml'
+                         bat ( def pom = readMavenPom file: 'pom.xml')
                         print pom.version
                   
                        }
