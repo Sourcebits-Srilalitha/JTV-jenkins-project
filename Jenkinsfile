@@ -9,15 +9,20 @@
       stage('check'){
          steps {
                 script {
-                  //Works only with multi branch
-                  echo 'Pulling...' + env.BRANCH_NAME
-                  echo  'versionNumber ...' + env.BUILD_NUMBER;
-                  //check Unix env
-                  echo 'Unix env ... ' + isUnix()
+                       //Works only with multi branch
+                       echo 'Pulling...' + env.BRANCH_NAME
+                       echo  'versionNumber ...' + env.BUILD_NUMBER;
+                       //check Unix env
+                       echo 'Unix env ... ' + isUnix()
+                  
+                        //read pom file
+                        def pom = readMavenPom file: 'pom.xml'
+                        print pom.version
+                  
                        }
                 }       
          }   
-      
+/*      
     // Build a war file
       stage('Build') {      
         steps {
@@ -63,6 +68,6 @@
                     print 'After Copy...'       
               }         
            }     
-        }        
+        }   */     
      } 
   }
