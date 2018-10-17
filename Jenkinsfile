@@ -7,7 +7,8 @@
                 script {
                    echo 'Pulling...' + env.BRANCH_NAME
                     def mvnHome = tool 'Maven 3.5.4'
-                   bat(/"${mvnHome}\bin\mvn" -Dintegration-tests.skip=true clean package/)
+                   //bat(/"${mvnHome}\bin\mvn" -Dintegration-tests.skip=true clean package/)
+                   bat(/"${mvnHome}\bin\mvn"/)
                         def pom = readMavenPom file: 'pom.xml'
                         print pom.version
                 }
