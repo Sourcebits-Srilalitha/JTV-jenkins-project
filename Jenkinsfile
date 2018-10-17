@@ -18,7 +18,7 @@
                         //read pom file
                         def pom = readMavenPom file: 'pom.xml'
                         print pom.version
-                  echo 'Env:: ' + env.getEnvironment()
+                        echo 'Env:: ' + env.getEnvironment()
                         //maven
                         def mvn_version = tool 'M3'
                         print 'maven version ...' + mvn_version
