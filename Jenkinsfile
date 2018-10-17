@@ -11,20 +11,15 @@
          steps {
                 script {
                   //Works only with multi branch
-                   echo 'Pulling...' + env.BRANCH_NAME
+                  echo 'Pulling...' + env.BRANCH_NAME
                   echo  'versionNumber ...' + env.BUILD_NUMBER;
-                   echo 'Getting mvnHome...'        
-                 /*  echo 'mvnHome...' + MAVEN_HOME
-                   //bat(/"${mvnHome}\bin\mvn" -Dintegration-tests.skip=true clean package/)
-                   bat(/"${MAVEN_HOME}\bin\mvn"/)
-                        def pom = readMavenPom file: 'pom.xml'
-                        print pom.version*/
+                   echo 'Getting mvnHome...'    
                 }
          }
        
       }
       
-  /*  stage('Build') {      
+   stage('Build') {      
       steps {
         print 'Before Build...'  
         bat 'mvn clean install'
@@ -77,7 +72,7 @@
           print 'After Copy...'       
        }         
       }     
-     }  */ 
+     }  
       
     } 
   }
