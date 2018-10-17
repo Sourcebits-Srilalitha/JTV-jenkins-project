@@ -6,6 +6,11 @@
          steps {
                 script {
                    echo 'Pulling...' + env.BRANCH_NAME
+                  
+                 echo 'Pulling complete env...' + env.getEnvironment() 
+                  echo 'Pulling... US Branch' + ${env.BRANCH}
+                  
+                  
                     def mvnHome = tool 'Maven 3.5.4'
                    //bat(/"${mvnHome}\bin\mvn" -Dintegration-tests.skip=true clean package/)
                    bat(/"${mvnHome}\bin\mvn"/)
