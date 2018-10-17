@@ -42,7 +42,8 @@
           if (isUnix()) {
                                    sh "'pwd' "
                                } else {
-                                   bat(/"path" /)
+              bat 'path'
+                                  
                                }
 
          
