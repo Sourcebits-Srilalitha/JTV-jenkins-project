@@ -1,8 +1,21 @@
   pipeline {
     agent any    
   
-    stages {    
-    stage('Build') {      
+    stages {   
+      stage('check'){
+         steps {
+                script {
+                   echo 'Pulling...' + env.BRANCH_NAME
+                    def mvnHome = tool 'Maven 3.5.4'
+                   bat(/"${mvnHome}\bin\mvn" -Dintegration-tests.skip=true clean package/)
+                        def pom = readMavenPom file: 'pom.xml'
+                        print pom.version
+                }
+         }
+       
+      }
+      
+  /*  stage('Build') {      
       steps {
         print 'Before Build...'  
         bat 'mvn clean install'
@@ -55,7 +68,7 @@
           print 'After Copy...'       
        }         
       }     
-     }   
+     }  */ 
       
-    }  
+    } 
   }
